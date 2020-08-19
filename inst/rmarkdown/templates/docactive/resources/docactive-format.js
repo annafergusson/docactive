@@ -23,6 +23,7 @@ function interactive() {
         for(var i = 1; i < parts.length; i++)
         {
            var reText = "{input}" + parts[i];
+           
            var ans = reText.match("{input}(.*){/input}");
            var new_class = "anscheckval";
            var check = ans[1].split("||");
@@ -38,21 +39,21 @@ function interactive() {
             if(new_class == "anscheckvals")
             {
               //check all options
-              for(var i = 0; i < check.length; i++)
+              for(var j = 0; j < check.length; j++)
               {
-                 if(check[i].length*font_size > box_width)
+                 if(check[j].length*font_size > box_width)
                  {
-                    box_width = check[i].length*font_size + fixed_size;
+                    box_width = check[j].length*font_size + fixed_size;
                  }
               }
             }
             if(new_class == "anscheckops")
             {
-              for(var i = 0; i < check2.length; i++)
+              for(var j = 0; j < check2.length; j++)
               {
-                 if(check2[i].length*font_size > box_width)
+                 if(check2[j].length*font_size > box_width)
                  {
-                    box_width = check2[i].length*font_size + fixed_size;
+                    box_width = check2[j].length*font_size + fixed_size;
                  }
               }
             }
