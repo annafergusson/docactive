@@ -1,0 +1,55 @@
+blockquote {
+  padding: 5px;
+  background-color:#F0F0F0;
+}
+
+.reveal {
+  padding: 5px;
+  background-color:#F0F0F0;
+  margin: 5px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td, tr {
+  border: solid #000000 1px;
+}
+
+.MCQ  {
+  list-style-type: none;
+  list-style-position:inside;
+  margin:0;
+  padding:0;
+  margin-bottom: 10px
+}
+
+.MCQcheck {
+  border: solid #000000 1px;
+  padding: 5px;
+  margin: 5px;
+  list-style: none;
+}
+
+
+td, th {
+  padding: 10px;
+}
+
+.center-align {
+  text-align:center;
+}
+
+input {
+  border: solid #000000 1px;
+  padding: 5px;
+}
+
+.correct {
+  background-color: #c1dba9;
+}
+
+.wrong {
+  background-color: #dbaea9;
+}

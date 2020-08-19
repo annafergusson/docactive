@@ -1,0 +1,59 @@
+---
+title: "Interactive"
+output: docactive::docactive
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# {.tabset}
+
+> On this page you'll find **interactive** examples of how you can make interactive things.
+
+## Tables 
+
+Best pet | Best non cat animal
+--- | -----
+cat{hide} | penguin{hide}
+
+Or use HTML for styling (or R packages that do this)
+
+<table>
+  <tr>
+    <td style="background-color:#cae8dc"> What is cool?</td>
+  </tr>
+  <tr>
+    <td> Statistics{hide}</td>
+  </tr>
+</table>
+
+## Fill in the gaps
+
+What is the mean underlying sound of kittens? {input}Mu{/input}
+
+What is the name of Anna's cat? {input}Elliot{/input}
+
+What is one of measures of central tendency? {input}mean, median, mode{/input}
+
+Around about how many million people live in NZ? {input}4.5||5{/input}
+
+## Multiple choice
+
+Which of the following statements are TRUE?
+
+ - {MCQ}
+ - Cats are cool!||1
+ - Dogs are OK||1
+ - Brocolli is awesome||0
+ - {/MCQ}
+
+## Reveal sections
+
+I wonder what is hidden below?
+
+::: {.reveal}
+
+![](https://media.giphy.com/media/f8ywYgttpGzzVPH5AO/giphy.gif)
+
+:::

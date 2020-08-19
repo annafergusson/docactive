@@ -1,0 +1,18 @@
+Package: docactive
+Title: Add Interactivity to HTML Documents
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Anna",
+           family = "Fergusson",
+           role = c("aut", "cre"),
+           email = "a.fergusson@auckland.ac.nz",
+           comment = c(ORCID = "0000-0002-1987-8150"))
+Description: Add interactivity to HTML documents.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.2
+Imports: 
+    rmarkdown,
+    utils
