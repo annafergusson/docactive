@@ -19,43 +19,51 @@ function interactive() {
   //find input boxes to create
     $("p:contains('{input}')").each(function (index) {
         var checkText = $(this).text().trim();
-        var ans = checkText.match("{input}(.*){/input}");
-        var new_class = "anscheckval";
-        var check = ans[1].split("||");
-        var check2 = ans[1].split(",");
-        var font_size = 15;
-        var fixed_size = 5;
-        if(check.length == 2){new_class = "anscheckvals";}
-        if(check2.length > 1){new_class = "anscheckops";}
-        //need to autosize
-        var box_width = 15;
-        if(new_class == "anscheckval")
-          {box_width = ans[1].length*font_size + fixed_size;}
-        if(new_class == "anscheckvals")
+        var parts = checkText.split("{input}");
+        for(var i = 1; i < parts.length; i++)
         {
-          //check all options
-          for(var i = 0; i < check.length; i++)
-          {
-             if(check[i].length*font_size > box_width)
-             {
-                box_width = check[i].length*font_size + fixed_size;
-             }
-          }
+           var reText = "{input}" + parts[i];
+           var ans = reText.match("{input}(.*){/input}");
+           var new_class = "anscheckval";
+           var check = ans[1].split("||");
+           var check2 = ans[1].split(",");
+           var font_size = 15;
+           var fixed_size = 5;
+           if(check.length == 2){new_class = "anscheckvals";}
+           if(check2.length > 1){new_class = "anscheckops";}
+            //need to autosize
+            var box_width = 15;
+            if(new_class == "anscheckval")
+              {box_width = ans[1].length*font_size + fixed_size;}
+            if(new_class == "anscheckvals")
+            {
+              //check all options
+              for(var i = 0; i < check.length; i++)
+              {
+                 if(check[i].length*font_size > box_width)
+                 {
+                    box_width = check[i].length*font_size + fixed_size;
+                 }
+              }
+            }
+            if(new_class == "anscheckops")
+            {
+              for(var i = 0; i < check2.length; i++)
+              {
+                 if(check2[i].length*font_size > box_width)
+                 {
+                    box_width = check2[i].length*font_size + fixed_size;
+                 }
+              }
+            }
+    
+            var newInput = "<input type='text' class='" + new_class + "' style='width:" + box_width + "px' data-answer='" + ans[1] +  "'>";
+             reText = reText.replace(ans[0], newInput);
+            parts[i] = reText;
+      
         }
-        if(new_class == "anscheckops")
-        {
-          for(var i = 0; i < check2.length; i++)
-          {
-             if(check2[i].length*font_size > box_width)
-             {
-                box_width = check2[i].length*font_size + fixed_size;
-             }
-          }
-        }
-
-        var newInput = "<input type='text' class='" + new_class + "' style='width:" + box_width + "px' data-answer='" + ans[1] +  "'>";
-        checkText = checkText.replace(ans[0], newInput);
-        $(this).html(checkText);
+        var merged = parts.join("");
+        $(this).html(merged);
   });
 
 	  //find MCQ questions to create
