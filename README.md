@@ -1,5 +1,4 @@
 # docactive
-
 Interactive HTML documents made with Rmd and badly written JS
 
 Install {docactive} from github using {devtools}

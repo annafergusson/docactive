@@ -11,6 +11,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 > On this page you'll find **interactive** examples of how you can make interactive things.
 
+*Include the button below on a page to allow students to reveal all the answers*
+
+<button id='showAnswers' class='doc'>Show all answers</button>
+
 ## Tables 
 
 Best pet | Best non cat animal
@@ -38,6 +42,12 @@ What is one of measures of central tendency? {input}mean, median, mode{/input}
 
 Around about how many million people live in NZ? {input}4.5||5{/input}
 
+## Drop down options
+
+Are cats the best animal? {select}yes,no{/select}
+
+***Note***: The first option listed will be used as the correct option.
+
 ## Multiple choice
 
 Which of the following statements are TRUE?
@@ -46,7 +56,6 @@ Which of the following statements are TRUE?
  - Cats are cool!||1
  - Dogs are OK||1
  - Brocolli is awesome||0
- - {/MCQ}
 
 ## Reveal sections
 
@@ -55,5 +64,7 @@ I wonder what is hidden below?
 ::: {.reveal}
 
 ![](https://media.giphy.com/media/f8ywYgttpGzzVPH5AO/giphy.gif)
+
+A cat!
 
 :::

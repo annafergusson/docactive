@@ -1,6 +1,7 @@
 blockquote {
   padding: 5px;
   background-color:#F0F0F0;
+  font-size: 1em;
 }
 
 .reveal {
@@ -41,7 +42,7 @@ td, th {
   text-align:center;
 }
 
-input {
+input, select {
   border: solid #000000 1px;
   padding: 5px;
 }
